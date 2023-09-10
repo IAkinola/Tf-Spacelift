@@ -91,9 +91,4 @@ resource "aws_instance" "dev_node" {
     })
     interpreter = var.host_os == "windows" ? ["Powershell", "-Command"] : ["bash", "-c"]
   }
-
-  provisioner "local-exec" {
-    when = destroy
-
-  }
 }
