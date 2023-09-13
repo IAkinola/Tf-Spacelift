@@ -68,7 +68,7 @@ resource "aws_security_group" "mtc_sg" {
 
 resource "aws_key_pair" "mtc_auth" {
   key_name   = "mtckey"
-  public_key = file("${path.module}/mnt/workspace/mtckey.pub")
+  public_key = file("${path.module}/mnt/workspace/mtc.pub")
 }
 
 resource "aws_instance" "dev_node" {
