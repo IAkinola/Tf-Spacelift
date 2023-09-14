@@ -6,9 +6,9 @@ resource "aws_key_pair" "mtc_auth" {
 resource "aws_instance" "dev_node" {
   instance_type          = "t3.micro"
   ami                    = data.aws_ami.server_ami.id
-  key_name               = aws_key_pair.mtc_auth_id
+  key_name               = aws_key_pair.mtc_auth.id
   vpc_security_group_ids = var.security_group_id
-  subnet_id              = var.subnet.id
+  subnet_id              = var.subnet_id
   user_data              = file("${path.module}/userdata.tpl")
 
   tags = {
