@@ -11,5 +11,5 @@ terraform {
 provider "aws" {
   region                   = var.aws_region
   # shared_credentials_files = ["C:/Users/Lucy III/.aws/credentials"]
-  profile                  = "vscode"
+  # profile                  = "vscode"
 }
