@@ -1,6 +1,6 @@
 resource "aws_key_pair" "mtc_auth" {
-  key_name   = "mtckey"
-  public_key = file("/mnt/workspace/mtc.pub")
+  key_name   = "accesskey"
+  public_key = file("/mnt/workspace/access.pub")
 }
 
 resource "aws_instance" "dev_node" {
